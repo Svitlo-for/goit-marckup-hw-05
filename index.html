@@ -7,6 +7,7 @@
     <title>Web Studio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,9 +53,21 @@
         <section class="hero">
             <div class="hero-container container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                <button class="button" type="button">Order Service</button>
+                <button class="button" type="button" data-modal-open>Order Service</button>
             </div>
         </section>
+
+        <!-- Modal window -->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-button" type="button" data-modal-close>
+                    <svg class="modal-icon" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close-black-18dp"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
 
         <section class="advantages">
             <div class="advantages-container container">  
@@ -487,6 +500,6 @@
         </div>        
         
     </footer>
-    
+    <script src="./js/modal.js"></script>
 </body>
 </html>
