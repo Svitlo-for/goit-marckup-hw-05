@@ -138,14 +138,18 @@ img {
     border-radius: 2px;
 
 }
-.header-nav-link.current::after,
-.header-nav-link:hover::after,
-.header-nav-link:focus::after {
+.header-nav-link.current {
+    color: var(--pressed-state-color);
+}
+
+.header-nav-link.current::after {
     background-color: var(--pressed-state-color);
 }
 .mail-tel {
     font-style: normal;
     margin-left: auto;
+}
+.mail-tel-link {
     transition: color var(--anim-fast);
 }
 .mail-tel-link:hover,
@@ -345,7 +349,6 @@ img {
 }
 .logo-icon {
     fill: currentColor;
-    transition: color var(--anim-fast);
 }
 .logo-icon:hover,
 .logo-icon:focus {
@@ -357,11 +360,13 @@ img {
     background-color: var(--main-txt-color);
     padding: 100px 0;
 }
+.footer-container {
+    margin-right: 120px;
+}
 
 .footer-block-container {
     display: flex;
     align-items: baseline;
-    gap: 120px;
 }
 
 .footer-text {
@@ -553,6 +558,13 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color var(--anim-fast), color var(--anim-fast), border var(--anim-fast);
+}
+.modal-button:hover,
+.modal-button:focus {
+    background-color: var(--pressed-state-color);
+    fill: var(--accent-txt-color);
+    border: 1px solid transparent;
 }
 .backdrop.is-hidden {
     opacity: 0;
