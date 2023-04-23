@@ -487,7 +487,8 @@ img {
 .overlay-description {
     color: var(--light-bg-color);
 }
-.project-item:hover .overlay {
+.project-card:hover .overlay,
+.project-card:focus .overlay {
     transform: translateY(0%);    
 }
 
